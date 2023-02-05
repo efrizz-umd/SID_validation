@@ -1,0 +1,29 @@
+#!/bin/csh
+#SBATCH --job-name=ShockInducedDilation_JOB_DETAILS_HERE
+#SBATCH --nodes=1
+#SBATCH --ntasks=128
+#SBATCH --oversubscribe
+#SBATCH --time=12:00:00
+#SBATCH --mail-user YOUR_EMAIL_HERE
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+
+#############################################################
+# change the below input variable to your own filename
+#############################################################
+
+
+set dir= # directory where you are running the specified script (eg in.shock_pwave) from
+set codeexe= # path to your executable/shell script from compiling LIGGGHTS-Public (ex: lmp_auto)
+
+cd $dir
+rm -r -f output.txt
+
+# load compiler and MPI
+module load gcc/9.4.0 
+module load openmpi/gcc/9.4.0/zen2/4.1.1
+
+# run the desired script, update ntasks above to match the third argument here,
+# which matches the product of the processors within the script
+mpirun -np 128 $codeexe -echo both -i ./in.shock_pwave > ./output.txt
