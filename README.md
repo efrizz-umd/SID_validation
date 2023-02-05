@@ -1,4 +1,4 @@
-# SID_validation
+# Validation of Shock Induced Granular Dilation
 # author: Eric Frizzell
 # efrizz@umd.edu
 
