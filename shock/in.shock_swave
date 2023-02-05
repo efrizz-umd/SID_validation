@@ -25,7 +25,7 @@ communicate 	single vel yes
 
 soft_particles yes
 
-read_restart	../../2m_20cm_compact_sweep/restart_2m_compact_20cm.static
+read_restart	../restart_files/restart_2m_compact_20cm.static
 
 ## Declare domain
 

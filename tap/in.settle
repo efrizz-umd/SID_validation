@@ -35,7 +35,7 @@ region	reg block -.01 .01 0.0 2.0 -0.02 .55 units box
 
 
 # read in the desired restart file, modify last argument as necessary
-read_restart restart.static
+read_restart ../restart_files/restart.static
 
 # neighbor skin style - atom pairs within a neighbor cutoff distance = force cutoff + skin distance, style = bin
 neighbor	 0.000625 bin	 # half the smalles particle radius

@@ -27,7 +27,7 @@ soft_particles yes
 
 # load the prepared granular assembly
 # change the last field to point to the desired assembly
-read_restart	../restart_2m_compact_20cm.static
+read_restart	../restart_files/restart_2m_compact_20cm.static
 
 ## Declare domain
 
